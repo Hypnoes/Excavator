@@ -12844,10 +12844,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Hypnoes\\Source\\Repos\\Excavator\\Excavator.csproj",
+      "projectUniqueName": "C:\\Users\\Hypnoes\\Source\\Repos\\Excavator\\Excavator.csproj",
       "projectName": "Excavator",
-      "projectPath": "c:\\Users\\Hypnoes\\Source\\Repos\\Excavator\\Excavator.csproj",
-      "outputPath": "c:\\Users\\Hypnoes\\Source\\Repos\\Excavator\\obj\\",
+      "projectPath": "C:\\Users\\Hypnoes\\Source\\Repos\\Excavator\\Excavator.csproj",
+      "outputPath": "C:\\Users\\Hypnoes\\Source\\Repos\\Excavator\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"
