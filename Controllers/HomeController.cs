@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -12,20 +13,17 @@ namespace Excavator.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
+            var x = new Dictionary<string, dynamic>();
+            x.Add("ProcessCount", System.Environment.ProcessorCount);
+            x.Add("Is64BitProcess", System.Environment.Is64BitProcess);
+            x.Add("OSVersion", System.Environment.OSVersion);
+            x.Add("Is64BitOperatingSystem", System.Environment.Is64BitOperatingSystem);
+            x.Add("UserDomainName", System.Environment.UserDomainName);
+            x.Add("MachineName", System.Environment.MachineName);
+            x.Add("UserName", System.Environment.UserName);
+            x.Add("Version", System.Environment.Version);
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
+            ViewData.Add("SysInfo", x);
             return View();
         }
 
