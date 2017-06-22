@@ -1,0 +1,58 @@
+@model bool
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Job Details</h2>
+
+<div>
+    <h4>Job</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+              ID: 
+        </dt>
+        <dd>
+              2
+        </dd>
+        <dt>
+              Job Name: 
+        </dt>
+        <dd>
+              job-02
+        </dd>
+        <dt>
+              Start time: 
+        </dt>
+        <dd>
+              @DateTime.Now;
+        </dd>
+        <dt>
+              Duration:
+        </dt>
+        <dd>
+              0s
+        </dd>
+        <dt>
+              Status: 
+        </dt>
+        <dd>
+              @ViewData["Flag"]
+        </dd>
+    </dl>
+</div>
+<div>
+    @{
+        if (ViewData["Flag"] == "Running")
+        {
+            <a asp-action="StopJob" asp-route-id="2" class="btn btn-default" role="button">Stop</a>
+        }
+        else
+        {
+            <a asp-action="StopJob" asp-route-id="2" class="btn btn-default disabled" role="button">Stop</a>
+        }
+    }
+    <br />
+    <a asp-controller="Home" asp-action="Index">Back to List</a>
+</div>

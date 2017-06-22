@@ -4822,19 +4822,34 @@
           "lib/portable-net45+win8+wp8+wpa81/_._": {}
         }
       },
-      "System.Text.Encoding.CodePages/4.4.0-preview1-25305-02": {
+      "System.Text.Encoding.CodePages/4.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "2.0.0-preview1-25305-02"
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.Handles": "4.0.1",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Text.Encoding": "4.0.11",
+          "System.Threading": "4.0.11"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard1.3/System.Text.Encoding.CodePages.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
+          "lib/net46/System.Text.Encoding.CodePages.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -11896,19 +11911,16 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/4.4.0-preview1-25305-02": {
-      "sha512": "3/KEEmZXmO60SKo12DVD1mfxqbiSiRXzyD5ncFgZdnDKS1taR3j0l6u049I+W32WbjDYrcVEazKv1WHXY7Wi7Q==",
+    "System.Text.Encoding.CodePages/4.0.1": {
+      "sha512": "SBjd4dG+7VvG11InuuAfmU57xCa09h5IzO6a4WbaRvlb7P4Q0jXQAk+HJtptar6WoJI0091E8hT6/N5g8WqacA==",
       "type": "package",
-      "path": "system.text.encoding.codepages/4.4.0-preview1-25305-02",
+      "path": "system.text.encoding.codepages/4.0.1",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Text.Encoding.CodePages.dll",
-        "lib/net461/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -11926,31 +11938,14 @@
         "ref/netstandard1.3/ru/System.Text.Encoding.CodePages.xml",
         "ref/netstandard1.3/zh-hans/System.Text.Encoding.CodePages.xml",
         "ref/netstandard1.3/zh-hant/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "ref/netstandard2.0/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/de/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/es/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/fr/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/it/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/ja/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/ko/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/ru/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/zh-hans/System.Text.Encoding.CodePages.xml",
-        "ref/netstandard2.0/zh-hant/System.Text.Encoding.CodePages.xml",
-        "ref/uap10.1/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/uap10.1/_._",
-        "system.text.encoding.codepages.4.4.0-preview1-25305-02.nupkg.sha512",
-        "system.text.encoding.codepages.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "system.text.encoding.codepages.4.0.1.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec"
       ]
     },
     "System.Text.Encoding.Extensions/4.3.0": {
@@ -12835,7 +12830,11 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.0-preview1-final",
-      "Microsoft.NETCore.App >= 2.0.0-preview1-002111-00"
+      "Microsoft.EntityFrameworkCore.Design >= 2.0.0-preview1-final",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.0-preview1-final",
+      "Microsoft.EntityFrameworkCore.Tools >= 2.0.0-preview1-final",
+      "Microsoft.NETCore.App >= 2.0.0-preview1-002111-00",
+      "System.Text.Encoding.CodePages >= 4.0.1"
     ]
   },
   "packageFolders": {
@@ -12865,7 +12864,23 @@
             "target": "Package",
             "version": "2.0.0-preview1-002111-00"
           },
+          "System.Text.Encoding.CodePages": {
+            "target": "Package",
+            "version": "4.0.1"
+          },
           "Microsoft.AspNetCore.All": {
+            "target": "Package",
+            "version": "2.0.0-preview1-final"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "2.0.0-preview1-final"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "target": "Package",
+            "version": "2.0.0-preview1-final"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "2.0.0-preview1-final"
           }

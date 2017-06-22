@@ -1,6 +1,7 @@
-﻿
-@using System.Collections.Generic
-
+﻿@{
+    @using System.Collections.Generic;
+    ViewData["Title"] = "Home Page";
+}
 <h2>System Info</h2>
 
 <br />
@@ -18,7 +19,7 @@
                 }
             </thead>
             <tbody>
-                @for(var i = 1; i <= 12; i++)
+                @for(var i = 1; i <= 1; i++)
                 {
                     <tr>
                         <td>@i</td>
@@ -45,16 +46,23 @@
             <thead>
                 <th>#</th>
                 <th>Job ID</th>
+                <th>Start Time</th>
                 <th>Duration</th>
                 <th>Status</th>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>job-01</td>
-                    <td>100s</td>
-                    <td>Finish</td>
-                </tr>
+                @foreach(var i in (List<List<string>>)ViewData["JobList"])
+                {
+                    <tr>
+                        @{
+                            foreach(var t in (List<string>)i)
+                            {
+                                <td> @t </td>
+                            }
+                        }
+                        <td><a asp-controller="Job" asp-action="Detial" asp-route-id="1">Deital</a></td>
+                    </tr>    
+                }
             </tbody>
         </table>
     </div>

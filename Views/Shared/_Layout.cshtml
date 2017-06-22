@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Excavator</title>
+    <title>@ViewData["Title"] -Excavator</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -43,9 +43,9 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#body">Sys-Info</a></li>
-                        <li><a >New-Job</a></li>
-                        <li><a >DataBase</a></li>
+                        <li><a href="/home/#body">Sys-Info</a></li>
+                        <li><a asp-controller="Job" asp-action="Index">New-Job</a></li>
+                        <li><a asp-controller="db" asp-action="Index">DataBase</a></li>
                     </ul>
                 </div>
             </div>

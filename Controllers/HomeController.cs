@@ -23,7 +23,30 @@ namespace Excavator.Controllers
             x.Add("UserName", System.Environment.UserName);
             x.Add("Version", System.Environment.Version);
 
+            var k = new List<List<string>>();
+            
+            var j = new List<string>();
+            j.Add("1");
+            j.Add("job-01");
+            j.Add(DateTime.Now.ToString());
+            j.Add("100s");
+            j.Add("Finish");
+            k.Add(j);
+
+            if (Request.QueryString.Value != "")
+            {
+                var j2 = new List<string>();
+                j2.Add(Request.Query["index"]);
+                j2.Add(Request.Query["name"]);
+                j2.Add(Request.Query["time"]);
+                j2.Add(Request.Query["duration"]);
+                j2.Add(Request.Query["status"]);
+                k.Add(j2);
+            }
+
+
             ViewData.Add("SysInfo", x);
+            ViewData.Add("JobList", k);
             return View();
         }
 
